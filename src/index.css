@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.scroller, .only{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 31%;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    
+} 
+.scroller::-webkit-scrollbar,
+.only::-webkit-scrollbar{
+    display: none;
+} 
+.only{
+    grid-auto-columns: 45%;
+}  
+.triangle::after{
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left:37%;
+    width: 0;
+    height: 0;
+    border-top: 20px solid white;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+
+} 
+
+.footer a:hover{
+    text-decoration: underline;
+}
+
+@media screen and (min-width: 1200px) {
+    .scroller, .only{
+        grid-auto-columns: 16%;
+    }
+}
