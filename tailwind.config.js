@@ -13,6 +13,13 @@ export default {
       'black': '#141414',
       'blue': '#00CED1',
     },
+    screens: {
+      'sm': '375px',
+      'md': '540px',
+      'lg' : '800px',
+      'xl': '1024px',
+     
+    },
     extend: {},
   },
   plugins: [],

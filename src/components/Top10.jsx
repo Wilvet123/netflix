@@ -75,20 +75,22 @@ var settings = {
       }
     },
     {
-      breakpoint: 600,
+      breakpoint: 768,
       settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2,
-        initialSlide: 2
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        initialSlide: 3
       }
     },
     {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2
-      }
-    }
+      
+        breakpoint: 520,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2
+        }
+    },
   ]
 };
 
@@ -98,24 +100,24 @@ const [titleHover, setTitleHover] = useState(false)
 
   return (
     <div>
-       <div className='bg-black lg:pl-16'
+       <div className='bg-black  lg:pl-16'
     onMouseEnter={() => { setMovieHover(true) }}
     onMouseLeave={() => { setMovieHover(false) }}>
-    <h1 className='text-white flex items-center  text-xl lg:text-3xl pt-5 lg:pt-16 pb-3 pl-5 lg:pl-0 font-bold '
+    <h1 className='text-white flex items-center sm:text-base  text-xl lg:text-3xl pt-5 lg:pt-16 pb-3 pl-5 lg:pl-0 font-bold '
       onMouseEnter={() => { setTitleHover(true) }}
       onMouseLeave={() => { setTitleHover(false) }}>Top 10 Movies in Nigeria Today
 
       <div className='flex items-center gap-3  text-blue  ' >
         <h1 className={`${titleHover ? 'opacity-1  translate-x-4' : 'translate-x-0  opacity-0 '} duration-500  text-blue text-base font-bold`} >Explore All</h1>
-        <MdOutlineKeyboardArrowRight size={30} className={`${movieHover ? 'opacity-1' : 'opacity-0'} duration-75`} /></div></h1>
+        <MdOutlineKeyboardArrowRight size={30} className={`${movieHover ? 'opacity-1' : 'opacity-0'} sm:hidden lg:block duration-75`} /></div></h1>
     <Slider {...settings} >
     {ranks.map((rank) => {
        return(
         
-        <div className='flex bg-black relative'>
-        <img src={rank.rankNo} className='object-cover w-[180px] h-[205px] rounded-md'/>
-        <div className='absolute  bottom-0 left-36 top-0 '>
-        <img src={rank.top} className='object-cover w-[180px] h-[205px] rounded-md'/>
+        <div className='flex  bg-black relative'>
+        <img src={rank.rankNo} className='object-cover w-[180px] sm:w-[80px] sm:h-[170px] h-[205px] rounded-md'/>
+        <div className='absolute  bottom-0 left-36 sm:left-20 top-0 '>
+        <img src={rank.top} className='object-cover w-[180px] sm:h-[180px] h-[205px] rounded-md'/>
         </div>
         </div>
       

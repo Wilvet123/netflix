@@ -7,7 +7,6 @@ import Movies from './components/Movie'
 import requests from './components/request'
 import MyList from './components/MyList'
 import TVShows from './components/TVShows'
-
 import NotFound from './components/NotFound'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
@@ -21,7 +20,7 @@ function App() {
   
 
   return (
-    <div className='overflow-hidden bg-black '>  
+    <div className='overflow-hidden  '>  
    
       <Routes>
         <Route path="/" element={<Profile />} />
@@ -34,14 +33,19 @@ function App() {
         </Route>
         <Route path='*' element={<NotFound />} />
       </Routes>
-      
-      <Movie title="Popular on Netflix" movieURL={requests.popular} />
-      <Movie title="Trending Now" movieURL={requests.trending} />
-      <Top10/>
+      <div className="absolute  top-[20%] lg:top-[80%] left-0 right-0">
+      <Movie title="Top Rated" movieURL={requests.trending} />
+      </div>
+      <div className='absolute top-[40%] bg-black lg:top-[105%] left-0 right-0'>
       <Movie title="Continue Watching for Sassy_leo" movieURL={requests.topRated} />
+      <Movie title="Popular on Netflix" movieURL={requests.popular} />
+      <Top10/>
       <Movie title="Only on Netflix" movieURL={requests.upcoming} />
       <PopUp/>
       <Footer/>
+      </div>
+      
+      
     
     
     </div>

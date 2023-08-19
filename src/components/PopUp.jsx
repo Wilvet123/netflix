@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import video2 from '../assets/video2.mp4'
+import video2 from '../assets/video1.mp4'
 import { FaPlay } from 'react-icons/fa'
 import { BsPlusLg, BsDot, BsHandThumbsUp, BsHandThumbsDown } from 'react-icons/bs'
 import { MdOutlineKeyboardArrowDown } from 'react-icons/md'
@@ -13,9 +13,9 @@ const PopUp = () => {
     const [isThumb, setThumb] = useState(false)
 
     return (
-        <div className='h-[430px] w-[480px]  mx-24 rounded-xl cursor-pointer bg-black my-24 relative'>
+        <div className='h-[430px] w-[480px] lg:block md:block hidden mx-24 rounded-xl cursor-pointer bg-black my-24 relative'>
 
-            <video autoPlay muted className='absolute top-0 rounded-t-xl w left-0'>
+<video autoPlay muted className='absolute top-0 z-50 rounded-t-xl w left-0'>
                 <source src={video2} type='video/mp4' />
             </video>
 

@@ -29,30 +29,30 @@ const Home = () => {
   const addIcon = useSelector((state) => state.net.userIcon)
 
   return (
-    <div className='h-screen flex items-center justify-center overflow-hidden'>
+    <div className=' flex items-center justify-center overflow-hidden'>
     
-      <div className='lg:block md:block hidden'>
-        <video autoPlay muted className="w-full object-cover h-screen">
+      <div className='lg:block h-[40%] w-full absolute top-0 left-0 sm:block md:block hidden'>
+        <video autoPlay muted className="w-full lg:block overflow-hidden md:block sm:block sm:h-[70%] hidden object-cover lg:h-screen">
           <source src={Video1} type="video/mp4" />
         </video>
         <div className='absolute  flex items-center top-64 p-12 text-white'>
           <img src={Neticon} className='w-24 h-24' />
           <h2 className='font-bold tracking-widest text-3xl'>SERIES</h2>
         </div>
-        <div className='flex gap-4 mt-4 justify-center mx-4 absolute left-16 bottom-[35%] '>
-          <div className='w-44 h-16 bg-white hover:bg-midGray hover:bg-opacity-60 flex items-center justify-center gap-2 rounded'>
-            <FaPlay size={28} />
-            <p className='text-black text-2xl ml-2 font-bold'>Play</p>
+        <div className='flex gap-4 mt-4 justify-center mx-4 absolute lg:left-16 sm:left-0 sm:top-[30%] lg:top-[150%]  '>
+          <div className='lg:w-44 lg:h-16 sm:h-8 sm:w-20 bg-white hover:bg-midGray hover:bg-opacity-60 flex items-center justify-center lg:gap-2 sm:gap-0 rounded'>
+            <FaPlay size={28}  className='sm:h-4 sm:w-7 lg:h-7' />
+            <p className='text-black lg:text-2xl sm:text-sm ml-2 sm:ml-1 font-bold'>Play</p>
           </div>
-          <div className='w-60 font-bold h-16 text-white bg-gray bg-opacity-70 hover:bg-opacity-50 flex items-center justify-center gap-2 rounded'>
-            <AiOutlineInfoCircle size={31} />
-            <p className="  text-white text-2xl ml-2">More Info</p>
+          <div className='lg:w-60 font-bold lg:h-16 sm:h-8 sm:w-36 text-white bg-gray bg-opacity-70 hover:bg-opacity-50 flex items-center justify-center lg:gap-2 sm:gap-0 rounded'>
+            <AiOutlineInfoCircle size={31} className='sm:h-4 sm:w-7 lg:h-7' />
+            <p className="  text-white sm:text-sm lg:text-2xl ml-2">More Info</p>
           </div>
         </div>
       </div>
 
      
-      <div className='text-white lg:hidden block bg-black px-4 h-[80%]'>
+      <div className='text-white sm:hidden h-screen lg:hidden block bg-black px-4 h-[80%]'>
         <div className='flex justify-between'>
           <h1 className='text-2xl font-bold'>For {user}</h1>
 
