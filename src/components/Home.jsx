@@ -21,6 +21,9 @@ import Movies from './Movie'
 import requests from './request'
 import Navbar from './Navbar'
 import Footer from './Footer'
+import Movie from './Movie';
+import Top10 from './Top10';
+import PopUp from './PopUp';
 
 
 const Home = () => {
@@ -29,9 +32,10 @@ const Home = () => {
   const addIcon = useSelector((state) => state.net.userIcon)
 
   return (
+    <div>
     <div className=' flex items-center justify-center overflow-hidden'>
     
-      <div className='lg:block h-[40%] w-full absolute top-0 left-0 sm:block md:block hidden'>
+      <div className='lg:block h-[40%] w-full absolute top-0 left-0 right-0 sm:block md:block hidden'>
         <video autoPlay muted className="w-full lg:block overflow-hidden md:block sm:block sm:h-[70%] hidden object-cover lg:h-screen">
           <source src={Video1} type="video/mp4" />
         </video>
@@ -52,7 +56,7 @@ const Home = () => {
       </div>
 
      
-      <div className='text-white sm:hidden h-screen lg:hidden block bg-black px-4 h-[80%]'>
+      <div className='text-white sm:hidden  lg:hidden block bg-black px-4 h-[80%]'>
         <div className='flex justify-between'>
           <h1 className='text-2xl font-bold'>For {user}</h1>
 
@@ -97,14 +101,24 @@ const Home = () => {
           </div>
         </div>
       </div>
-      
+      <div className="absolute  top-[20%] lg:top-[80%] left-0 right-0">
+      <Movie title="Top Rated" movieURL={requests.trending} />
+      </div>
+      <div className='absolute top-[40%] bg-black lg:top-[105%] left-0 right-0'>
+      <Movie title="Continue Watching for Sassy_leo" movieURL={requests.topRated} />
+      <Movie title="Popular on Netflix" movieURL={requests.popular} />
+      <Top10/>
+      <Movie title="Only on Netflix" movieURL={requests.upcoming} />
+      <PopUp/>
+      <Footer/>
+      </div>
       
      
       
 
       
     </div>
-
+</div>
 
 
 

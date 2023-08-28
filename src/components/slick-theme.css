@@ -55,10 +55,7 @@
 .slick-next:hover:before,
 .slick-next:focus:before
 {
-    position: fixed;
     
-    padding: 20px;
-    background-color: #000000;
     opacity: 1;
 }
 .slick-prev.slick-disabled:before,

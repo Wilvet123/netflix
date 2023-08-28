@@ -11,6 +11,7 @@ import { FaPlay } from 'react-icons/fa'
 import { AiOutlineInfoCircle } from 'react-icons/ai'
 import Neticon from '../assets/Neticon.png'
 import {RiArrowDownSFill} from 'react-icons/ri'
+import Movies from "./Movies"
 
 const netLinks = [
   {
@@ -52,7 +53,7 @@ const Navbar = () => {
   return (
     <>
        <div className=" lg:block sm:block text-white relative">
-      <div className={` ${scroller ? 'bg-black' : 'bg-transparent'} duration-500 flex w-full z-[400] fixed 
+      <div className={` ${scroller ? 'bg-black' : 'bg-transparent'}  duration-500 flex w-full z-[400] fixed 
       top-0 left-0 lg:px-16 sm:px-5 lg:py-5 sm:py-3 text-white items-center justify-between`}>
         <div className="flex  items-center sm:gap-x-0 lg:gap-x-5">
           <img src={Vector} className="lg:h-6 lg:w-32 sm:h-4 sm:w-[70px] mr-6" />

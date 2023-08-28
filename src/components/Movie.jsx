@@ -10,7 +10,7 @@ import Neticon from '../assets/Neticon.png'
 import { MdOutlineKeyboardArrowRight } from 'react-icons/md'
 import PopUp from './PopUp';
 
-const Movies = ({ title, movieURL }) => {
+const Movie = ({ title, movieURL }) => {
   const [pick, setPick] = useState([]);
   const [movieHover, setMovieHover] = useState(false)
   const [titleHover, setTitleHover] = useState(false)
@@ -63,10 +63,10 @@ const Movies = ({ title, movieURL }) => {
   };
   return (
     <>
-    <div> <div className=' sm:pl-5 lg:pl-16'
+    <div> <div className=' sm:pl-5 lg:pl-16 overflow-hidden'
     onMouseEnter={() => { setMovieHover(true) }}
     onMouseLeave={() => { setMovieHover(false) }}>
-    <h1 className='text-white flex items-center sm:text-gray sm:text-base sm:pl-0 sm:py-2 lg:text-3xl pt-5 lg:pt-16 pb-3 pl-5 lg:pl-0 font-bold '
+    <h1 className='text-white flex items-center sm:text-base sm:pl-0 sm:py-2 lg:text-3xl pt-5 lg:pt-16 pb-3 pl-5 lg:pl-0 font-bold '
       onMouseEnter={() => { setTitleHover(true) }}
       onMouseLeave={() => { setTitleHover(false) }}>{title}
 
@@ -117,4 +117,4 @@ const Movies = ({ title, movieURL }) => {
 </>
   )}    
 
-export default Movies
+export default Movie
