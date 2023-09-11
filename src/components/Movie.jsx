@@ -27,40 +27,41 @@ const Movie = ({ title, movieURL }) => {
   }, [pick])
   var settings = {
    
-      infinite: false,
-      speed: 500,
-      slidesToShow: 5.25,
-      slidesToScroll: 5.25,
-      initialSlide: 5.25,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 5.25,
-          slidesToScroll: 5.25,
-          initialSlide: 5.25,
-          infinite: false,
-          
-        }
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 3.25,
-          slidesToScroll: 3.25,
-          initialSlide: 3.25
-        }
-      },
-      {
+  infinite: false,
+  speed: 500,
+  slidesToShow: 5.5,
+  slidesToScroll: 5,
+  initialSlide: 0,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3.05,
+        slidesToScroll: 3.05,
+        infinite: true,
+        
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        initialSlide: 3
+      }
+    },
+    {
+      
         breakpoint: 520,
         settings: {
-          slidesToShow: 2.15,
-          slidesToScroll: 2.15,
-          initialSlide: 2.15
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2
         }
-      }
-    ]
-  };
+    },
+  ]
+};
+
   return (
     <>
     <div> <div className=' sm:pl-5 lg:pl-16 overflow-hidden'

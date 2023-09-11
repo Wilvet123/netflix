@@ -40,6 +40,7 @@ const Movies = () => {
   window.addEventListener('scroll', useScroll)
   return (
     <div>
+    <Navbar />
     <div className= {` ${scroller ? 'bg-black' : 'bg-transparent'} z-50 fixed top-16 py-6 px-20  w-full flex items-center text-white gap-12 `}>
       <h1 className='text-4xl font-bold'>Movies</h1>
       <div className='h-9 w-32 bg-black border flex items-center justify-center gap-4 border-white'>
@@ -79,7 +80,6 @@ const Movies = () => {
       <Movie title="Romantic Movies" movieURL={requests.popular} />
       <Top10/>
       <Movie title="Blockbuster Movies" movieURL={requests.upcoming} />
-      <PopUp/>
       <Footer/>
       </div>
       

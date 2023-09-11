@@ -33,6 +33,7 @@ const TVShows = () => {
 
   return (
     <div>
+    <Navbar />
     <div className=' flex items-center justify-center overflow-hidden'>
     
       <div className='lg:block h-[40%] w-full absolute top-0 left-0 right-0 sm:block md:block hidden'>
@@ -56,7 +57,7 @@ const TVShows = () => {
       </div>
 
      
-      <div className='text-white sm:hidden h-screen lg:hidden block bg-black px-4 h-[80%]'>
+      <div className='text-white sm:hidden h-screen lg:hidden block bg-black px-4'>
         <div className='flex justify-between'>
           <h1 className='text-2xl font-bold'>For {user}</h1>
 
@@ -109,7 +110,6 @@ const TVShows = () => {
       <Movie title="Trending Now" movieURL={requests.popular} />
       <Top10/>
       <Movie title="Romantic Korean TV Shows" movieURL={requests.upcoming} />
-      <PopUp/>
       <Footer/>
       </div>
       

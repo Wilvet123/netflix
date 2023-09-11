@@ -33,19 +33,15 @@ const NewPopular = () => {
 
   return (
     <div className='bg-black pt-12'>
-    
+      <Navbar/>
       <Movie title="Top Rated" movieURL={requests.trending} />
-   
       <Movie title="Continue Watching for Sassy_leo" movieURL={requests.topRated} />
       <Movie title="Popular on Netflix" movieURL={requests.popular} />
       <Top10/>
       <Top10/>
       <Movie title="Only on Netflix" movieURL={requests.upcoming} />
-      <Movie title="Only on Netflix" movieURL={requests.tvShows} />
-      <Movie title="Only on Netflix" movieURL={requests.movieDay} />
-      <Movie title="Only on Netflix" movieURL={requests.personPopular} />
-
-      <PopUp/>
+      <Movie title="Horror Movies" movieURL={requests.tvShows} />
+      <Movie title="New Korean TV Shows" movieURL={requests.movieDay} />
       <Footer/>
       
       

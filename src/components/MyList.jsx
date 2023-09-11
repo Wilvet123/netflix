@@ -33,15 +33,12 @@ const MyList = () => {
 
   return (
     <div className='bg-black'>
-    
-      <Movie  movieURL={requests.trending} />
-      
-     
+      <Navbar />  
+      <Movie  movieURL={requests.trending} />    
       <Movie title="Continue Watching for Sassy_leo" movieURL={requests.topRated} />
       <Movie title="Popular on Netflix" movieURL={requests.popular} />
       <Top10/>
       <Movie title="Only on Netflix" movieURL={requests.upcoming} />
-      <PopUp/>
       <Footer/>
       
 </div>

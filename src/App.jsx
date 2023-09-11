@@ -20,8 +20,8 @@ function App() {
   
 
   return (
-    <div className='overflow-hidden w-full  '>  
-     <Navbar />
+    <div className='overflow-hidden w-full bg-black '>  
+     
       <Routes>
         <Route path="/" element={<Profile />} />
         <Route path="/browse" >

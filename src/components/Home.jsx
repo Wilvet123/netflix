@@ -33,9 +33,10 @@ const Home = () => {
 
   return (
     <div>
-    <div className=' flex items-center justify-center overflow-hidden'>
+    <Navbar />
+    <div className=' flex bg-black items-center justify-center overflow-hidden'>
     
-      <div className='lg:block h-[40%] w-full absolute top-0 left-0 right-0 sm:block md:block hidden'>
+      <div className='lg:block h-[40%] lg:h-full w-full absolute top-0 left-0 right-0 sm:block md:block hidden'>
         <video autoPlay muted className="w-full lg:block overflow-hidden md:block sm:block sm:h-[70%] hidden object-cover lg:h-screen">
           <source src={Video1} type="video/mp4" />
         </video>
@@ -109,7 +110,6 @@ const Home = () => {
       <Movie title="Popular on Netflix" movieURL={requests.popular} />
       <Top10/>
       <Movie title="Only on Netflix" movieURL={requests.upcoming} />
-      <PopUp/>
       <Footer/>
       </div>
       
